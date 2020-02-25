@@ -1,0 +1,5 @@
+String sql = "UPDATE CONTRACT " +  
+" SET NO_OF_OPEN_ORDERS = (select count(*) no_of_open_orders from ORDERS " +  
+" where ORDERS.contract_id= CONTRACT.contract_id " + 
+" and ORDERS.order_status != 'Closed' ) ";
+ludb().execute(sql);
