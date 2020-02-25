@@ -1,0 +1,6 @@
+String sql = "SELECT PATIENT_ID, SSN, FIRST_NAME FROM PATIENT";
+Db.Rows rows = db("HIS_DB").fetch(sql);
+for (Db.Row row:rows){
+	yield(row.cells());
+}
+;
