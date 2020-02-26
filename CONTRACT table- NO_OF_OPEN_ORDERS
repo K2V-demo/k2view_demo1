@@ -1,3 +1,4 @@
+//Update a ComputedField of CONTRACT table- NO_OF_OPEN_ORDERS. The information about this field needs to be taken from another LU table: ORDERS. 
 String sql = "UPDATE CONTRACT " +  
 " SET NO_OF_OPEN_ORDERS = (select count(*) no_of_open_orders from ORDERS " +  
 " where ORDERS.contract_id= CONTRACT.contract_id " + 
